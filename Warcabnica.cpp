@@ -110,7 +110,7 @@ void Warcabnica::usunPiona(short int posX, short int posY){
 }
 
 void Warcabnica::promocjaPiona(unsigned int index){
-    std::unique_ptr<Pion> k(new Krol(piony[index]->getPosX(), piony[index]->getPosY(), piony[index]->getCzyBialy()));
+    std::unique_ptr<Pion> k(new Krol(piony[index]->getPosX(), piony[index]->getPosY(), piony[index]->getCzyBialy(), COLORSWAP));
     piony[index] = std::move(k);
 }
 

@@ -1,7 +1,12 @@
 #include "Warcaby.h"
 
 Warcaby::Warcaby(){
+    #ifndef _WIN32
     setlocale(LC_CTYPE, "Polish");
+    #endif
+    #ifdef _WIN32 
+    SetConsoleOutputCP(65001);
+    #endif
     gracze[0].setCzyBialy(true);
     gracze[1].setCzyBialy(false);        
 }
@@ -98,6 +103,7 @@ void Warcaby::menu(){
             }
             cin.clear();
             cin.ignore(1024, '\n');
+            cout << "Podaj nową nazwę:" << endl;
             std::getline(std::cin, nazwa);                              
             gracze[w2 - 1].setNazwa(nazwa);
             nazwa = std::string();

@@ -1,5 +1,8 @@
 #pragma once
 #include "Warcabnica.h"
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 class Warcaby{
     private:

@@ -91,7 +91,7 @@ bool Pion::getCzyBialy() const{
     return czyBialy;
 }
 
-const char* Pion::getUnicode() const{
+const char* Pion::getUnicode() const{    
     return unicode;
 }
 
